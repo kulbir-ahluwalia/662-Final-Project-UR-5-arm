@@ -1,0 +1,26 @@
+<launch>
+	<arg name="config" default="true"/>
+	<arg name="rviz_config" default="$(find ur5_robotiq_arm)/launch/moveit.rviz"/>
+
+	<!--<arg name="gripper" default="true"/>
+	<arg name="tip_name" if="$(arg gripper)" default="right_gripper_tip"/>
+	<arg name="tip_name" unless="$(arg gripper)" default="right_gripper_tip"/>-->
+
+	<include file="$(find ur5_robotiq_arm)/launch/planning_context.launch">
+		<arg name="load_robot_description" value="false"/>
+		<!--<arg name="gripper" value="true"/>
+		<arg name="tip_name" value="$(arg tip_name)"/>-->
+	</include>
+
+	<include file="$(find ur5_robotiq_arm)/launch/move_group.launch">
+		<arg name="allow_trajectory_execution" value="true"/>
+		<arg name="fake_execution" value="false"/>
+		<!--<arg name="info" value="$(arg gripper)"/>-->
+	</include>
+
+	<include file="$(find ur5_robotiq_arm)/launch/moveit_rviz.launch">
+		<arg name="config" value="$(arg config)"/>
+		<!--<arg name="rviz_config" value="$(arg rviz_config)"/> -->
+	</include>
+
+</launch>
