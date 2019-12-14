@@ -1,0 +1,19 @@
+<launch>
+
+  <!-- loads moveit_controller_manager on the parameter server which is taken as argument 
+    if no argument is passed, moveit_simple_controller_manager will be set -->
+  <arg name="moveit_controller_manager" default="moveit_simple_controller_manager/MoveItSimpleControllerManager" />
+  <param name="moveit_controller_manager" value="$(arg moveit_controller_manager)"/>
+
+<!-- if the controller manager is running and we can talk to it but need to know the name -->
+  <arg name="controller_manager_name" default="simple_contoller_manager" />
+  <param name="controller_manager_name" value="$(arg controller_manager_name" />
+
+<!-- flag indicating whether teh controller manager should be used or not -->
+<arg name="use_controller_manager" default="true" />
+<param name="use_controller_manager" value="$(arg use_controller_manager" />
+
+  <!-- loads ros_controllers to the param server -->
+  <rosparam file="$(find ur5_robotiq_arm)/config/controllers.yaml"/> <!-- ros_controllers -->
+  
+</launch>
