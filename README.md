@@ -1,4 +1,5 @@
 # 662-Final-Project-UR-5-arm
+Link to YouTube playlist: https://www.youtube.com/playlist?list=PLSaHroqSzd_WR5xg_QvIdhWTvgah-BKno 
 
 The Repository holds the .zip file of the ros workspace used in generating the Project. 
 
