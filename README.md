@@ -12,12 +12,12 @@ Steps to launch the robot Arm:
 
 To create the UR5 arm with the robotiq gripper:
 
-1. Use the src/ur5_robotiq_description folder, which has the urdf.xacro file which combines both the robot arm with the gripper.
+1. Use the src/ur5_robotiq_description folder, which has the urdf.xacro file which combines the robot arm with the gripper.
 
-2. Lauch the urdf.xacro file with changes if needed, in moveif configuration to generate a config by moveIT.
+2. Lauch the urdf.xacro file with changes if needed, in moveit configuration to generate a config by Moveit.
 3. Follow the steps to create your own poses with the robot and plan the motion of the robot
-4. create the controllers.yaml file and the ur5_robotiq_moveit_controller_manager.launch.xml and add the appropriate changes as per the reference files provided in the repo.
-5. then create the sample.lauch file, to launch the robot arm onto the 3D simulator called Rviz and a real world simulator called Gazebo. 
+4. Create the controllers.yaml file and the ur5_robotiq_moveit_controller_manager.launch.xml and add the appropriate changes as per the reference files provided in the repo.
+5. Then create the sample.lauch file, to launch the robot arm onto the 3D simulator called Rviz and a real world simulator called Gazebo. 
 6. Watch your robot arm move, in your defined positions with an advanced pathplanning. 
 
 ------------------------------------------------------------------------------------------------------------------------------
